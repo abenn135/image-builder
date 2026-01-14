@@ -15,6 +15,7 @@
   "iso_url": "https://cdimage.ubuntu.com/releases/24.04/release/ubuntu-24.04.3-live-server-arm64.iso",
   "machine_type": "virt",
   "os_display_name": "Ubuntu 24.04",
+  "qemuargs": null,
   "qemu_binary": "qemu-system-aarch64",
   "shutdown_command": "shutdown -P now",
   "unmount_iso": "true"
