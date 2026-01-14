@@ -4,7 +4,7 @@
   "boot_command_prefix": "c<wait>linux /casper/vmlinuz --- autoinstall ds='nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/24.04/'<enter><wait><wait><wait><wait>initrd /casper/initrd<wait><wait><enter><wait>boot<enter>",
   "build_name": "ubuntu-2404",
   "build_target": "raw",
-  "cpu_model": "host",
+  "cpu_model": "max",
   "distro_arch": "arm64",
   "distro_name": "ubuntu",
   "distro_version": "24.04",
