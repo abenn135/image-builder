@@ -30,7 +30,7 @@
           "-vga",
           "virtio",
           "-device",
-           "virtio-gpu-pci"
+          "virtio-vga"
         ]
       ],
       "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -S -E sh -c 'userdel -f -r {{user `ssh_username`}} && rm -f /etc/sudoers.d/{{user `ssh_username` }} && rm -f /etc/sudoers.d/90-cloud-init-users && {{user `shutdown_command`}}'",
