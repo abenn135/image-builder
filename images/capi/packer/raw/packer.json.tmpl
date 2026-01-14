@@ -20,6 +20,7 @@
       "http_directory": "{{user `http_directory`}}",
       "iso_checksum": "{{user `iso_checksum_type`}}:{{user `iso_checksum`}}",
       "iso_url": "{{user `iso_url`}}",
+      "machine_type": "{{user `machine_type`}}",
       "memory": "{{user `memory`}}",
       "net_device": "virtio-net",
       "output_directory": "{{user `output_directory`}}",
@@ -115,7 +116,7 @@
       "user": "builder"
     },
     {
-      "arch": "{{user `goss_arch`}}",
+      "arch": "{{user `arch`}}",
       "format": "{{user `goss_format`}}",
       "format_options": "{{user `goss_format_options`}}",
       "goss_file": "{{user `goss_entry_file`}}",
@@ -128,7 +129,7 @@
       "use_sudo": true,
       "vars_file": "{{user `goss_vars_file`}}",
       "vars_inline": {
-        "ARCH": "amd64",
+        "ARCH": "{{user `arch`}}",
         "OS": "{{user `distro_name` | lower}}",
         "OS_VERSION": "{{user `distro_version` | lower}}",
         "PROVIDER": "raw",
@@ -153,6 +154,7 @@
     "ansible_extra_vars": "ansible_python_interpreter=/usr/bin/python3",
     "ansible_scp_extra_args": "",
     "ansible_user_vars": "",
+    "arch": "amd64",
     "boot_media_path": "http://{{ .HTTPIP }}:{{ .HTTPPort }}",
     "boot_wait": "10s",
     "build_timestamp": "{{timestamp}}",
@@ -189,6 +191,7 @@
     "kubernetes_series": null,
     "kubernetes_source_type": null,
     "machine_id_mode": "444",
+    "machine_type": null,
     "memory": "2048",
     "output_directory": "./output/{{user `build_name`}}-kube-{{user `kubernetes_semver`}}",
     "python_path": "",
