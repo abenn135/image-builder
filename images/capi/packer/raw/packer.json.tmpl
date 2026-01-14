@@ -28,9 +28,7 @@
       "qemuargs": [
         [
           "-vga",
-          "virtio",
-          "-device",
-          "virtio-vga"
+          "none"
         ]
       ],
       "shutdown_command": "echo '{{user `ssh_password`}}' | sudo -S -E sh -c 'userdel -f -r {{user `ssh_username`}} && rm -f /etc/sudoers.d/{{user `ssh_username` }} && rm -f /etc/sudoers.d/90-cloud-init-users && {{user `shutdown_command`}}'",
